@@ -1,0 +1,14 @@
+@use "./mixins.scss" as *;
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .layout__header {
+    flex-shrink: 0;
+  }
+  .layout__outlet {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+  }
+}

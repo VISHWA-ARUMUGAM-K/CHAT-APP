@@ -1,0 +1,48 @@
+@use "./mixins" as *;
+
+.navHeader {
+  width: 100%;
+  z-index: 30;
+  background-color: white;
+  padding: 0.5rem;
+  // height: 50px;
+
+  .container {
+    .headerContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .headerLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      // .headerRight__signin {
+      //   font-size: 0.8rem;
+      //   height: 1.8rem;
+      // }
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+
+    .headerRight__logout {
+      font-size: 0.75rem;
+      background-color: black;
+
+      @include media("sm") {
+        font-size: 0.75rem;
+      }
+
+      @include media("md") {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

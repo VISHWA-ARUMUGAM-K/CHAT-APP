@@ -1,0 +1,91 @@
+@use "./mixins.scss" as *;
+
+.signinContainer {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media("xl") {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__form {
+    min-width: 20vh;
+    max-width: 40vh;
+    width: 100%;
+
+    .signinMessage {
+      padding-block: 2rem;
+      font-size: 3rem;
+    }
+
+    .formContainer {
+      &__fullName {
+        margin-bottom: 1.3rem;
+      }
+      &__email {
+        margin-bottom: 1.3rem;
+      }
+
+      &__password {
+        margin-bottom: 1.3rem;
+      }
+
+      &__submit {
+        margin-block: 1rem;
+        width: 100%;
+        background-color: black;
+        height: 3rem;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+
+    .optionsMessage {
+      text-align: center;
+    }
+    .optionsLogin {
+      margin-block: 1rem;
+      width: 100%;
+      background-color: black;
+      height: 3rem;
+    }
+  }
+
+  &__image {
+    display: none;
+    // flex: 1;
+    // height: 100%;
+    // @include media("xl") {
+    //   display: flex;
+    //   flex-direction: column;
+    //   background-color: black;
+    // }
+    //
+    // .imageContainer {
+    //   @include media("xl") {
+    //     flex: 1;
+    //     position: relative;
+    //     height: 500px;
+    //     width: 100px;
+    //   }
+    //
+    //   &__image {
+    //     @include media("xl") {
+    //       position: absolute;
+    //       inset: 0;
+    //       height: 100%;
+    //       width: 100%;
+    //       object-fit: cover;
+    //     }
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,90 @@
+.messageInputContainer {
+  padding: 1rem;
+  width: 100%;
+
+  .imagePreview {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .previewWrapper {
+      position: relative;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        border: 1px solid var(--zinc-700);
+      }
+
+      .removeButton {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        background-color: var(--base-300);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .messageForm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .inputWrapper {
+      flex: 1;
+      display: flex;
+      gap: 0.5rem;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      .textInput {
+        width: 100%;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+      }
+
+      .fileInput {
+        display: none;
+      }
+
+      .uploadButton {
+        display: none;
+
+        @media (min-width: 640px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: var(--zinc-400);
+          transition: color 0.2s ease-in-out;
+
+          &.active {
+            color: var(--emerald-500);
+          }
+        }
+      }
+    }
+
+    .sendButton {
+      border-radius: 50%;
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
