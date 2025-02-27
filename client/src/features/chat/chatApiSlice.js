@@ -25,14 +25,14 @@ export const chatApiSlice = apiSlice.injectEndpoints({
         body: { text, image },
       }),
       async onQueryStarted(
-        // { text, image },
+        { text, image },
         { dispatch, queryFulfilled, getState },
       ) {
         try {
           // Optimistic update
           const state = getState();
           const messages = state.chat.messages;
-          // const message = { text, image };
+          const message = { text, image };
 
           //TODO: ADD OPTIMISTIC UPDATE AFTER SOMETIME
 
